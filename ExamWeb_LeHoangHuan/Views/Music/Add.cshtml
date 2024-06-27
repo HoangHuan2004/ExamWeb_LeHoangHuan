@@ -1,0 +1,33 @@
+﻿@model DiaNhac
+
+
+<form asp-action="Add" method="post">
+    <h2>Thêm mới</h2>
+    <hr />
+    <div class="form-group">
+        <label>Tựa đề</label>
+        <input asp-for="TuaCD" class="form-control" />
+        <span asp-validation-for="TuaCD" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label>Nghệ Sĩ</label>
+        <input asp-for="NgheSi" class="form-control" />
+        <span asp-validation-for="NgheSi" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label>Thể loại</label>
+        <input type="checkbox" asp-for="TrongNuoc" class="form-check-input" />
+    </div>
+    <div class="form-group">
+        <label>Số lượng</label>
+        <input asp-for="SoLuong" class="form-control" />
+        <span asp-validation-for="SoLuong" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label>Giá Bán</label>
+        <input asp-for="GiaBan" class="form-control" />
+        <span asp-validation-for="GiaBan" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary"> Save </button>
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+</form>
